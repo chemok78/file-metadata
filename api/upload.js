@@ -13,11 +13,14 @@ module.exports = function(app) {
 
   app.post('/api/upload', function(req, res) {
   //route for POST request when upload
+  
+  console.log(req.file);
 
     var fileSize = {
     //multer module gives req.file object with size property
     //setup a JSON object with this size property only
-
+      
+      original_name: req.file.originalname,
       size: req.file.size
 
     }
