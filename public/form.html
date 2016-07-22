@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>File Metadata Microservice</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <h3 class="header">
+                Submit a file to view its filesize
+            </h3></br>
+            <form action = "/api/upload" id="uploadForm" method="post" enctype="multipart/form-data" role="form">
+                <input type="file" name="fileName">
+                <input type="submit" value="Upload" name="submit" />
+            </form>
+        </div>
+    </body>
+</html>
