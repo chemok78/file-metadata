@@ -1,6 +1,6 @@
 File Metadata Microservice
 
-Build with Node JS, Express JS, MongoDB
+Build with Node JS and Express JS, using Multer module
 
 1) You can submit a FormData object that includes a file upload.
 
