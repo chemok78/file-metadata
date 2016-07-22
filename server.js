@@ -8,7 +8,6 @@ require('dotenv').config({
 });
 var bodyParser = require('body-parser');
 var api = require('./api/upload.js');
-var routes = require('./routes/index.js');
 var multer = require('multer');
 
 //Configuration for bodyParser
@@ -26,8 +25,6 @@ app.use(multer({
 
 api(app);
 //call api module with our app instance as parameter
-routes(app);
-//call routes module with our app instance as parameter
 
 app.listen(port, function() {
   //create server    

@@ -3,6 +3,14 @@
 module.exports = function(app) {
 
   var path = process.cwd();
+  
+  app.get('/', function(req, res) {
+  //root route shows info page  
+
+    res.sendFile(path + '/public/index.html');
+
+  });
+
 
   app.get('/api', function(req, res) {
   //route for showing upload form
@@ -13,8 +21,6 @@ module.exports = function(app) {
 
   app.post('/api/upload', function(req, res) {
   //route for POST request when upload
-  
-  console.log(req.file);
 
     var fileSize = {
     //multer module gives req.file object with size property
